@@ -1,0 +1,10 @@
+<h3>"Total Members in Fire Nation: <%= @total_search_results %>"</h3>
+
+<ul>
+  <% @members.each do |member| %>
+    <li class='member'>
+      <h4>Name: <%= member[:name] %></h4>
+      <img src='<%= member[:photoUrl] %>' />
+    </li>
+  <% end %>
+</ul>
