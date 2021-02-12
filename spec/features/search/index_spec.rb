@@ -33,6 +33,16 @@ RSpec.describe 'As a user' do
 
           expect(find(".member", match: :first)).to have_content("Name: Afiko")
         end
+
+        it 'an image for the member' do
+          visit root_path
+
+          select 'Fire Nation', from: :nation
+
+          click_button 'Search For Members'
+
+          expect(find(".member", match: :first)).to have_selector('img')
+        end
       end
     end
   end
